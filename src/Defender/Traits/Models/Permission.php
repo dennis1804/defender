@@ -65,7 +65,7 @@ trait Permission
      *
      * @return PermissionUserPivot|\Illuminate\Database\Eloquent\Relations\Pivot
      */
-    public function newPivot(Model $parent, array $attributes, $table, $exists)
+    public function newPivot(Model $parent, array $attributes, $table, $exists, $using = NULL)
     {
         $userModel = app()['config']->get('defender.user_model');
         $roleModel = app()['config']->get('defender.role_model');
