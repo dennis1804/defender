@@ -35,7 +35,7 @@ trait RoleHasPermissions
      *
      * @return PermissionRolePivot|\Illuminate\Database\Eloquent\Relations\Pivot
      */
-    public function newPivot(Model $parent, array $attributes, $table, $exists)
+    public function newPivot(Model $parent, array $attributes, $table, $exists, $using = NULL)
     {
         $permissionModel = app()['config']->get('defender.permission_model');
 
